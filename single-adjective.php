@@ -13,24 +13,40 @@
 						<p><?php the_field('definition')?></p>
 						<table>
 							<tr>
+								<td colspan=3>Singular</td>
+								<td colspan=3>Plural</td>
+							</tr>
+							<tr>
 								<td><?php the_field('masculine_nominative_singular')?></td>
 								<td><?php the_field('feminine_nominative_singular')?></td>
 								<td><?php the_field('neuter_nominative_singular')?></td>
+								<td><?php the_field('masculine_nominative_plural')?></td>
+								<td><?php the_field('feminine_nominative_plural')?></td>
+								<td><?php the_field('neuter_nominative_plural')?></td>
 							</tr>
 							<tr>
 								<td><?php the_field('masculine_accusative_singular')?></td>
 								<td><?php the_field('feminine_accusative_singular')?></td>
 								<td><?php the_field('neuter_accusative_singular')?></td>
+								<td><?php the_field('masculine_accusative_plural')?></td>
+								<td><?php the_field('feminine_accusative_plural')?></td>
+								<td><?php the_field('neuter_accusative_plural')?></td>
 							</tr>
 							<tr>
 								<td><?php the_field('masculine_genitive_singular')?></td>
 								<td><?php the_field('feminine_genitive_singular')?></td>
 								<td><?php the_field('neuter_genitive_singular')?></td>
+								<td><?php the_field('masculine_genitive_plural')?></td>
+								<td><?php the_field('feminine_genitive_plural')?></td>
+								<td><?php the_field('neuter_genitive_plural')?></td>
 							</tr>
 							<tr>
 								<td><?php the_field('masculine_dative_singular')?></td>
 								<td><?php the_field('feminine_dative_singular')?></td>
 								<td><?php the_field('neuter_dative_singular')?></td>
+								<td><?php the_field('masculine_dative_plural')?></td>
+								<td><?php the_field('feminine_dative_plural')?></td>
+								<td><?php the_field('neuter_dative_plural')?></td>
 							</tr>
 						</table>
 					</div>
