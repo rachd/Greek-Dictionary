@@ -2,11 +2,14 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1><?php the_title() ?></h1>
+				</div>
+			</div>
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post(); ?>
-			<div class="container-fluid">
+			<?php $loop = new WP_Query( array( 'post_type' => 'adjective') ); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<div class="row">
 					<div class="col-xs-12">
 						<h4><?php the_title()?></h4>
@@ -74,8 +77,7 @@
 						</table>
 					</div>
 				</div>
-			</div>
-		<?php endwhile; ?>
+			<?php endwhile; wp_reset_query(); ?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
