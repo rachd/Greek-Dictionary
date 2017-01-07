@@ -12,7 +12,7 @@
 						<h4><?php the_title()?></h4>
 						<?php $cases = get_field('cases_governed');
 							foreach ($cases as $case) {
-								echo '<p>' . get_field(strtolower($case)) . ' (+' . $case . ')</p>';
+								echo '<p>(+' . $case . ') ' . get_field(strtolower($case)) . '</p>';
 							}
 						?>
 					</div>
