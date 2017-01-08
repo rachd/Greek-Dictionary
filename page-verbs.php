@@ -7,58 +7,63 @@
 					<h1><?php the_title() ?></h1>
 				</div>
 			</div>
-
-			<?php $loop = new WP_Query( array( 'post_type' => 'verb') ); ?>
-			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<div class="row">
-					<div class="col-xs-12">
+			<div class="row">
+				<?php 
+					$args = array(
+						'post_type'	=> 'verb',
+						'orderby'	=> 'title',
+						'order'		=> 'ASC'	
+					);
+					$loop = new WP_Query( $args ); ?>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<div class="col-xs-12 col-sm-4 entry">
 						<h4><?php the_title()?></h4>
 						<p><?php the_field('definition')?></p>
 						<table>
 							<tr>
 								<td></td>
-								<td colspan=3>Present Active</td>
+								<td colspan=3 class="table-label">Present Active</td>
 							</tr>
 							<tr>
 								<td></td>
-								<td>Indicative</td>
-								<td>Imperative</td>
+								<td class="table-label">Indicative</td>
+								<td class="table-label">Imperative</td>
 							</tr>
 							<tr>
-								<td>1st Singular</td>
+								<td class="table-label">1st Singular</td>
 								<td><?php the_field('present_indicative_active_first_singular')?></td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>2nd Singular</td>
+								<td class="table-label">2nd Singular</td>
 								<td><?php the_field('present_indicative_active_second_singular')?></td>
 								<td><?php the_field('present_imperative_active_singular')?></td>
 							</tr>
 							<tr>
-								<td>3rd Singular</td>
+								<td class="table-label">3rd Singular</td>
 								<td><?php the_field('present_indicative_active_third_singular')?></td>
 								<td></td>
 							</tr>
 							<tr></tr>
 							<tr>
-								<td>1st Plural</td>
+								<td class="table-label">1st Plural</td>
 								<td><?php the_field('present_indicative_active_first_plural')?></td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>2nd Plural</td>
+								<td class="table-label">2nd Plural</td>
 								<td><?php the_field('present_indicative_active_second_plural')?></td>
 								<td><?php the_field('present_imperative_active_plural')?></td>
 							</tr>
 							<tr>
-								<td>3rd Plural</td>
+								<td class="table-label">3rd Plural</td>
 								<td><?php the_field('present_indicative_active_third_plural')?></td>
 								<td></td>
 							</tr>
 						</table>
 					</div>
-				</div>
-			<?php endwhile; wp_reset_query(); ?>
+				<?php endwhile; wp_reset_query(); ?>
+			</div>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
