@@ -5,6 +5,18 @@ Version: 1.0
 Author: Rachel Dorn
 */
 
+.menu {
+	padding: 20px 0;
+	display: flex;
+	list-style-type: none;
+}
+
+.menu li {
+	flex-grow: 1;
+	text-align: center;
+	text-decoration: none;
+}
+
 table {
 	width: 100%;
 }
